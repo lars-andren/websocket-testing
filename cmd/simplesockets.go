@@ -14,7 +14,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var addr = flag.String("addr", "prod2.cloudcharge.se", "http service address")
+var addr = flag.String("addr", "url.com", "http service address")
 
 func main() {
 
@@ -42,7 +42,6 @@ func main() {
 
 func doTest() {
 	conn := openWebsocket()
-
 	request := createNotificationRequest()
 	writeToSocket(conn, &request)
 }
